@@ -1,0 +1,12 @@
+{
+  "name": "doatinga-teste",
+  "version": "1.0.0",
+  "description": "Repositório para testar o uso do Git com os colegas",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
