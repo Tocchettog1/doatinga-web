@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+@theme {
+  --color-azul-escuro: #42586F;
+  --color-azul-principal: #406db0;
+  --color-verde-escuro: #5b9753;
+  --color-verde-principal: #86c479;
+  --color-amarelo-escuro: #f3922b;
+  --color-amarelo-principal: #fabb52;
+  --color-branco-principal: #fefefe;
+  --color-preto-principal: #000000;
+  
+  --font-family-fonte-principal: 'Lexend', sans-serif;
+  --font-family-fonte-secundaria: 'Roboto', sans-serif;
+}
