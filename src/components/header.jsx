@@ -1,23 +1,28 @@
-const Header = () => { 
-    return ( 
-        <div className="pr-10 pl-10 border-b-1 border-cinza-principal  w-full h-full text-preto-principal font-fonte-principal text-xl font-normal shadow-[0_5px_7px_-2px_rgba(0,0,0,0.1)]">
-            <nav className="flex flex-row gap-4 justify-between">
-                <div className="flex flex-row gap-4   p-4 rounded-lg items-center">
+const Header = () => {
+    return (
+        <header className="w-full h-16px-10  border-b border-cinza-principal  text-preto-principal font-fonte-principal text-xl font-normal shadow-md                       
+        ">
+            <nav className="flex flex-row justify-between items-center h-full">
+                {/* Seção Logo */}
+                <div className="flex flex-row gap-4 items-center">
                     <img src="/src/assets/logo.svg" alt="logo" />
                     <p>Doatinga</p>
                 </div>
-                <div className="flex flex-row gap-30   p-4 rounded-lg items-center">
-                    <p>Início</p>
-                    <p>Pontos de coleta</p>
-                    <p>Como doar</p>
 
+                {/* Seção de Links de Navegação */}
+                <div className="flex flex-row gap-12 items-center">
+                    <a href="/" className="hover:text-gray-500 transition-colors">Início</a>
+                    <a href="/pontos-de-coleta" className="hover:text-gray-500 transition-colors">Pontos de coleta</a>
+                    <a href="/como-doar" className="hover:text-gray-500 transition-colors">Como doar</a>
                 </div>
-                <div className="flex flex-row gap-4 p-4 rounded-lg items-center">
-                    <p>Cadastro</p>
+
+                {/* Seção de Cadastro */}
+                <div className="flex items-center">
+                    <a href="/cadastro" className="hover:text-gray-500 transition-colors pr-5">Cadastro</a>
                 </div>
             </nav>
-        </div>
+        </header>
     )
 }
 
-export default Header;  
+export default Header;
