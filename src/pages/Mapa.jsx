@@ -18,14 +18,13 @@ L.Marker.prototype.options.icon = DefaultIcon;
 
 
 const Mapa = () => {
-  // Coordenadas de Viamão, RS
-  const position = [-30.0815, -51.0255];
+  const position = [-30.1559, -51.1528];
 
   return (
     <div style={{ height: "100vh", width: "100%" }}>
       <MapContainer 
         center={position} 
-        zoom={13} 
+        zoom={15} 
         style={{ height: "100%", width: "100%" }}
       >
         <TileLayer
