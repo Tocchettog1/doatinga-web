@@ -8,7 +8,9 @@ import Mapa from './pages/Mapa.jsx'
 function App() {
   return (
     <div>
+      <Header/>
       <Mapa/>
+      <Footer/>
     </div>
   )
 }

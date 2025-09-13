@@ -1,21 +1,45 @@
-import mapa from '../assets/Mapateste.svg'
-import Footer from '../components/footer';
-import Header from '../components/header';
+import React from 'react';
+import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
+import "leaflet/dist/leaflet.css";
 
-const Mapa = () => { 
-    return ( 
-        <div className="min-h-screen flex flex-col">
-            <Header />
-            <div className="flex-1 w-full overflow-hidden">
-                <img 
-                    src={mapa} 
-                    alt="mapa" 
-                    className="w-full h-full object-cover"
-                />
-            </div>
-            <Footer />
-        </div>
-    )
-}
+// --- Bloco de correção do ícone ---
+import L from "leaflet";
+import icon from 'leaflet/dist/images/marker-icon.png';
+import iconShadow from 'leaflet/dist/images/marker-shadow.png';
 
-export default Mapa;  
+let DefaultIcon = L.icon({
+    iconUrl: icon,
+    shadowUrl: iconShadow,
+    iconSize: [25, 41],
+    iconAnchor: [12, 41]
+});
+L.Marker.prototype.options.icon = DefaultIcon;
+// --- Fim do bloco de correção ---
+
+
+const Mapa = () => {
+  // Coordenadas de Viamão, RS
+  const position = [-30.0815, -51.0255];
+
+  return (
+    <div style={{ height: "100vh", width: "100%" }}>
+      <MapContainer 
+        center={position} 
+        zoom={13} 
+        style={{ height: "100%", width: "100%" }}
+      >
+        <TileLayer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        />
+        <Marker position={position}>
+          <Popup>
+            AParece pelo amor de deus
+          </Popup>
+        </Marker>
+      </MapContainer>
+    </div>
+  );
+};
+
+export default Mapa;
