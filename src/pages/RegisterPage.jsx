@@ -7,16 +7,16 @@ function RegisterPage() {
   return (
     <div className="register-page-container">
     
-      <AuthAside 
-        title="Bem vindo de volta!"
-        subtitle="Para se manter conectado Faça login na sua conta"
-        buttonText="Login"
-        navigateTo="/login"
-        backGroundVariant="green"
-        textVariant="light"
-        buttonVariant="secondary"
-        >
-    </AuthAside>
+        <AuthAside 
+            title="Bem vindo de volta!"
+            subtitle="Para se manter conectado Faça login na sua conta"
+            buttonText="Login"
+            navigateTo="/login"
+            backGroundVariant="green"
+            textVariant="light"
+            buttonVariant="secondary"
+            >
+        </AuthAside>
 
       <div className="form-section">
         <RegisterForm />

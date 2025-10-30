@@ -15,14 +15,16 @@
 .form-title {
     font-size: 2.2rem;
     font-weight: 600;
-    color: #86C479; 
+    color: #5B9753; 
     margin-bottom: 1.5rem;
 }
 
 
 .register-form .input-field-container,
-.register-form .btn-register {
+.register-form {
     width: 100%;
+    display: flex;
+    padding: 1rem;
 }
 
 .btn-register {
@@ -31,7 +33,9 @@
     font-weight: 600;
     font-size: 1rem;
     border: 1px solid #86C479;
-    padding: 0.9rem 1.5rem;
+    padding: 1rem;
+    width: 300px; 
+    margin-top: 30px;
     border-radius: 50px;
     cursor: pointer;
     transition: background-color 0.2s ease;
