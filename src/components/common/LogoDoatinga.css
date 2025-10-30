@@ -1,0 +1,30 @@
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background-color: transparent;
+  width: 350px;
+
+}
+
+.imagem img {
+  width: 130px;
+  height: 130px;
+}
+
+.texto {
+  font-family: 'Lexend', sans-serif;
+  color: #42586F;
+  font-size: 10px;
+}
+
+.texto h1 {
+  color: #42586F;
+  margin-bottom: -10px;
+}
+
+.texto p {
+  font-size: 17px;
+  color: #42586F;
+  line-height: 1.5em;
+}
