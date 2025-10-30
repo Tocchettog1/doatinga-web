@@ -1,15 +1,35 @@
-import React from "react";
-import "./InputField.css"; 
+import React from 'react';
+import './InputField.css'; 
 
-function FormularioCriarConta() {
-    return (
-    <div className= "formulario_cadastro">  
-        nome = prompt('Digite seu nome completo'); Sei que não é assim. Vou alterar mais tarde,
-        email = prompt('Digite o seu e-mail');     quando eu entender mais de react :p
-        senha = prompt('Digite sua senha');
-    </div>  
-    )
+
+function InputField({ 
+  iconSrc, 
+  iconAlt = "Ícone do campo", 
+  type, 
+  placeholder, 
+  value, 
+  onChange,
+  required = false 
+}) {
+  return (
+    <div className="input-field-container">
+      <span className="input-icon">
+        <img 
+          src={iconSrc}
+          alt={iconAlt} 
+        />
+      </span>
+      
+      <input 
+        className="input-field"
+        type={type}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+        required={required} 
+      />
+    </div>
+  );
 }
 
-export default FormularioCriarConta;
-
+export default InputField;
