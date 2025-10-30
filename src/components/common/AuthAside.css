@@ -1,0 +1,85 @@
+
+.auth-aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; 
+  text-align: center;
+  padding: 2.5rem;
+  width: 40vw;
+  height: 100vh; 
+  gap: 3rem;
+  box-sizing: border-box;
+}
+
+.auth-aside-main-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem; 
+}
+
+.auth-aside-title {
+  font-size: 2.2rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.auth-aside-subtitle {
+  font-size: 1rem;
+  line-height: 1.5;
+  max-width: 250px; 
+}
+
+
+.auth-aside.green {
+  background-color: #86C479;
+}
+.auth-aside.orange {
+  background-color: #FABB52;
+}
+
+/*variante de cor de texto, acho q nao vai precisar de outra*/
+.auth-aside.light {
+  color: white; 
+}
+
+
+.btn-primary {
+  background-color: #FABB52; 
+  color: white;
+  border: none;
+  padding: 0.9rem 1.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 180px;
+  transition: all 0.2s ease;
+}
+
+/*primario é da coluna laranja*/
+.btn-primary:hover {
+  background-color: white;
+  color: #FABB52; 
+  border: 2px solid #FABB52;
+}
+
+/*secundário é o da coluda verde*/
+.btn-secondary {
+  background-color: #86C479;
+  color: white;
+  border: 2px solid white;
+  padding: 0.9rem 1.5rem;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  min-width: 180px;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: white;
+  color: #86C479;
+}
