@@ -1,7 +1,7 @@
 
-.register-form {
-    display: flex;
-    flex-direction: column; 
+.login-form {
+    display:flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;    
     gap: 1.5rem;            
@@ -12,27 +12,26 @@
     box-sizing: border-box;
 }
 
-.form-title {
+.login-form-title {
     font-size: 2.2rem;
     font-weight: 600;
-    color: #5B9753; 
+    color: #F3922B; 
     margin-bottom: 1.5rem;
 }
 
-
-.register-form .input-field-container,
+.login-form .input-field-container,
 .register-form {
     width: 100%;
     display: flex;
     padding: 1rem;
 }
 
-.btn-register {
-    background-color: #5B9753; 
+.btn-login {
+    background-color: #FABB52; 
     color: white; 
     font-weight: 600;
     font-size: 1rem;
-    border: 1px solid #86C479;
+    border: 1px solid #F3922B;
     padding: 1rem;
     width: 250px; 
     margin-top: 30px;
@@ -41,6 +40,6 @@
     transition: background-color 0.2s ease;
 }
 
-.btn-register:hover {
-    background-color: #388138;
+.btn-login:hover {
+    background-color: #F3922B;
 }

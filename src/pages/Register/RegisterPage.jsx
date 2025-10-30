@@ -1,12 +1,11 @@
 import React from 'react';
-import RegisterForm from '../components/Register/RegisterForm.jsx';
-import AuthAside from '../components/common/AuthAside.jsx';
+import RegisterForm from '../../components/Register/RegisterForm.jsx';
+import AuthAside from '../../components/common/SideColumn/AuthAside.jsx';
 import './RegisterPage.css';
 
 function RegisterPage() {
   return (
     <div className="register-page-container">
-    
         <AuthAside 
             title="Bem vindo de volta!"
             subtitle="Para se manter conectado Faça login na sua conta"
