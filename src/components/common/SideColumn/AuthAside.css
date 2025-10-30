@@ -58,6 +58,7 @@
   cursor: pointer;
   min-width: 180px;
   transition: all 0.2s ease;
+  border: 2px solid white;
 }
 
 /*primario é da coluna laranja*/

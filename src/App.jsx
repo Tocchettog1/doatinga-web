@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import RegisterPage from "./pages/RegisterPage";
+import RegisterPage from "./pages/Register/RegisterPage.jsx";
+import LoginPage from './pages/Login/LoginPage.jsx';
 
 function App() {
   return (
@@ -10,7 +11,7 @@ function App() {
         <Routes>
           <Route path="/" element={<>DoaTinga Home</>} />
 
-          <Route path="/login" element={<>Login</>} />
+          <Route path="/login" element={<LoginPage />} />
 
           <Route path="/catalogo" element={<>Catálogo</>} />
 

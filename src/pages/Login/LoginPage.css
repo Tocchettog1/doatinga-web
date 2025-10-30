@@ -1,11 +1,10 @@
-.register-page-container {
+.login-page-container {
     display: flex;
-    flex-direction: row;
-
+    flex-direction: row
 
 }
 
-.form-section {
+.login-form-section {
     display: flex;
     flex-grow: 1; 
     justify-content: center;

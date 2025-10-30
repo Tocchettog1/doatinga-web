@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import InputField from '../common/InputField.jsx';
+import InputField from '../common/InputTemplate/InputField.jsx';
 import Button from '../common/Button.jsx';
 import './RegisterForm.css';
 
