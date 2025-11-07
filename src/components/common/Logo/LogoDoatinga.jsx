@@ -1,12 +1,15 @@
 import React from "react";
 import "./LogoDoatinga.css"; 
+import logoImagem from "../../../assets/logo_doatinga.png.svg";
+
+
 
 function LogoDoatinga() {
   return (
     <div className="logo">
       <div className="imagem">
         <img
-          src="logo_doatinga.png"
+          src={logoImagem}
           alt="logo Doatinga"
           class="container_imagem_logo_Doatinga"
         />
