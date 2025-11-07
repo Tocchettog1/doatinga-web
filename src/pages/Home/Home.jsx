@@ -1,5 +1,6 @@
 import Footer from "../../components/common/Footer/Footer.jsx";
 import Header from "../../components/common/Header/Header.jsx";
+import MapContainer from "../../components/map/MapContainer.jsx";
 
 
 
@@ -10,7 +11,7 @@ function Home(){
         <main>
             <Header/>
             <div>
-                <h1>TESTE</h1>
+                <MapContainer/>
             </div>
             <Footer/>
         </main>
