@@ -9,7 +9,7 @@
     font-family: 'Lexend', sans-serif;
     padding-bottom: 5px;
     border-bottom: 1px #D5D5D5 solid;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12); /* sombra só para baixo */
+    box-shadow: 0 6px 12px rgba(39, 39, 39, 0.12); /* SOMBRA INFERIOR */
 
 }
 
