@@ -1,23 +1,28 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Catalogo from './pages/Catalogo'; // 👈 import da página
 
 function App() {
   return (
     <BrowserRouter>
-      <header></header>
+      <header>
+        <h2 style={{ textAlign: 'center' }}>DoaTinga</h2>
+      </header>
 
       <main>
         <Routes>
           <Route path="/" element={<>DoaTinga Home</>} />
-
           <Route path="/login" element={<>Login</>} />
-
-          <Route path="/catalogo" element={<>Catálogo</>} />
+          
+          {/* 👇 Aqui chamamos o componente de catálogo */}
+          <Route path="/catalogo" element={<Catalogo />} />
 
           <Route path="*" element={<>404 MEU CHAPA!</>} />
         </Routes>
       </main>
 
-      <footer></footer>
+      <footer style={{ textAlign: 'center', padding: '20px' }}>
+        © 2025 DoaTinga
+      </footer>
     </BrowserRouter>
   );
 }
