@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import RegisterPage from "./pages/Register/RegisterPage.jsx";
 import LoginPage from './pages/Login/LoginPage.jsx';
+import Home from './pages/Home/Home.jsx';
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
 
       <main>
         <Routes>
-          <Route path="/" element={<>DoaTinga Home</>} />
+          <Route path="/" element={<Home/>} />
 
           <Route path="/login" element={<LoginPage />} />
 
