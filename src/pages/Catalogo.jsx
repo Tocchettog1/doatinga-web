@@ -1,6 +1,11 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { fetchCatalogItems } from '../services/catalogApi';
 import ItemCard from '../components/ItemCard';
+
+// IMPORTAÇÃO DO HEADER E FOOTER
+import Header from '../components/common/Header/Header';
+import Footer from '../components/common/Footer/Footer';
+
 import './Catalogo.css';
 
 export default function Catalogo() {
@@ -9,14 +14,14 @@ export default function Catalogo() {
   const [loading, setLoading] = useState(true);
   const [erro, setErro] = useState('');
 
-  // Carregar dados do JSON
+  // Carregar dados do catálogo
   useEffect(() => {
     async function carregar() {
       try {
         const data = await fetchCatalogItems();
         setItens(data);
-      } catch (e) {
-        setErro(e.message);
+      } catch (error) {
+        setErro('Erro ao carregar itens do catálogo.');
       } finally {
         setLoading(false);
       }
@@ -24,74 +29,45 @@ export default function Catalogo() {
     carregar();
   }, []);
 
-  // Filtrar pela busca
+  // Filtragem dos itens
   const filtrados = useMemo(() => {
-    const q = busca.toLowerCase();
-    return itens.filter(i => i.nome.toLowerCase().includes(q));
+    return itens.filter((item) =>
+      item.nome.toLowerCase().includes(busca.toLowerCase())
+    );
   }, [itens, busca]);
 
-  if (loading) return <p>Carregando catálogo...</p>;
-  if (erro) return <p>Erro: {erro}</p>;
-
   return (
-    <div className="catalogo__container">
-      {/* ================= FILTROS ================= */}
-      <aside className="catalogo__filtros">
-        <h2>Filtros</h2>
+    <>
+      {/* HEADER GLOBAL */}
+      <Header />
 
-        <div className="filtro">
-          <label>Localização</label>
-          <select>
-            <option>Adicionar bairro</option>
-          </select>
-        </div>
+      <main className="catalogo">
+        <div className="catalogo__topo">
+          <h1>Catálogo</h1>
 
-        <div className="filtro">
-          <label>Horário de retirada</label>
-          <select>
-            <option>Adicionar turno</option>
-          </select>
-        </div>
-
-        <div className="filtro">
-          <label>Doar ou retirada</label>
-          <div className="checkbox-group">
-            <label><input type="checkbox" /> Disponível para retirar</label>
-            <label><input type="checkbox" /> Precisa de doação</label>
-          </div>
-        </div>
-
-        <div className="filtro">
-          <label>Tipo de doação</label>
-          <div className="checkbox-group">
-            <label><input type="checkbox" /> Comida</label>
-            <label><input type="checkbox" /> Roupas</label>
-            <label><input type="checkbox" /> Itens de higiene</label>
-            <label><input type="checkbox" /> Utensílios domésticos</label>
-            <label><input type="checkbox" /> Água</label>
-          </div>
-        </div>
-      </aside>
-
-      {/* ================= CONTEÚDO PRINCIPAL ================= */}
-      <main className="catalogo__conteudo">
-        {/* Barra de busca */}
-        <div className="catalogo__busca">
+          {/* Campo de busca */}
           <input
             type="text"
-            placeholder="Buscar itens por nome"
+            placeholder="Buscar item..."
             value={busca}
             onChange={(e) => setBusca(e.target.value)}
           />
         </div>
 
+        {/* Mensagens de carregamento ou erro */}
+        {loading && <p>Carregando itens...</p>}
+        {erro && <p className="erro">{erro}</p>}
+
         {/* Grid de cards */}
         <div className="catalogo__grid">
-          {filtrados.map(item => (
+          {filtrados.map((item) => (
             <ItemCard key={item.id} item={item} />
           ))}
         </div>
       </main>
-    </div>
+
+      {/* FOOTER GLOBAL */}
+      <Footer />
+    </>
   );
 }
