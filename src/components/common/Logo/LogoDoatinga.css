@@ -15,9 +15,15 @@
   width: 70px;
   height: auto; 
   object-fit: contain;
+  align-items: center;
+  background-color: transparent;
+  width: 280px;
+
 }
 
 .texto {
+  padding-left: 15px;
+  color: black;
   font-family: 'Lexend', sans-serif;
   color: #42586F;
   display: flex;
@@ -36,6 +42,7 @@
   color: #42586F;
   line-height: 1.2em; 
   margin-top: 0; 
+  font-size: 10px;
 }
 
 
