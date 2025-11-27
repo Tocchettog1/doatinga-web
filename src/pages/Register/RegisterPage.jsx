@@ -1,6 +1,7 @@
 import React from 'react';
 import RegisterForm from '../../components/Register/RegisterForm.jsx';
 import AuthAside from '../../components/common/SideColumn/AuthAside.jsx';
+import LogoDoatinga from '../../components/common/Logo/LogoDoatinga.jsx';
 import './RegisterPage.css';
 
 function RegisterPage() {
@@ -14,7 +15,8 @@ function RegisterPage() {
             backGroundVariant="green"
             textVariant="light"
             buttonVariant="secondary"
-            >
+          >
+            <LogoDoatinga alignment="left" />
         </AuthAside>
 
       <div className="form-section">

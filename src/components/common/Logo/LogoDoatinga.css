@@ -1,34 +1,58 @@
+
 .logo {
   display: flex;
+  align-items: center; 
+  gap: 10px; 
+  background-color: transparent; 
+  flex-shrink: 0; 
+  /* Remover qualquer margin/padding que possa estar empurrando a logo */
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.imagem img {
+  width: 70px;
+  height: auto; 
+  object-fit: contain;
   align-items: center;
   background-color: transparent;
   width: 280px;
 
 }
 
-.imagem img {
-  width: 90px;
-  height: 90px;
-}
-
 .texto {
   padding-left: 15px;
   color: black;
   font-family: 'Lexend', sans-serif;
-  font-size: 10px;
+  color: #42586F;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .texto h1 {
-  color: black;
-  font-weight: 500;
-  padding-top: 15px;
-  margin-bottom: -10px;
+  color: #42586F;
+  font-size: 24px; 
+  margin-bottom: 0; 
 }
 
 .texto p {
-  font-size: 17px;
-  font-weight: 300;
-  padding-top: 15px;
-  line-height: 1em;
-  color: black;
+  font-size: 14px; 
+  color: #42586F;
+  line-height: 1.2em; 
+  margin-top: 0; 
+  font-size: 10px;
+}
+
+
+.logo-right {
+  margin-left: auto; 
+  margin-right: 0;
+}
+
+.logo-left {
+  
+  margin-right: auto;
+  margin-left: 0;
 }

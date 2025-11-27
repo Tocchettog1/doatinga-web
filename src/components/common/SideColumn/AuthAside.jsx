@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../Button';
 import './AuthAside.css';
-/*inserir import Logo*/
+
 
 function AuthAside({
     title,
@@ -12,12 +12,13 @@ function AuthAside({
     backGroundVariant,
     textVariant,
     buttonVariant,
-    children /* lugares pra colocar logo ou outros elementos espelhados */
+    children /* lugares pra colocar logo ou outros elementos */
 }) {
      const navigate = useNavigate();
      const handleNavigate = () => {
         navigate(navigateTo);
     };
+
 
     return (
         <aside className={`auth-aside ${backGroundVariant} ${textVariant}`}>
@@ -38,7 +39,7 @@ function AuthAside({
                 </Button>
             </div>
         </aside>
-    );    
+    );
 }
 
 export default AuthAside;
