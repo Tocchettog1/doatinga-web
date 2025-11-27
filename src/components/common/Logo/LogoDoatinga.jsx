@@ -1,14 +1,17 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import "./LogoDoatinga.css"; 
+import logoImagem from '../../../assets/logo_doatinga.png';
 
-function LogoDoatinga() {
+function LogoDoatinga({ alignment }) { 
   return (
-    <div className="logo">
+    <Link to="/" className={`logo logo-${alignment}`}>
+      
       <div className="imagem">
         <img
-          src="logo_doatinga.png"
+          src={logoImagem}
           alt="logo Doatinga"
-          class="container_imagem_logo_Doatinga"
+          className="container_imagem_logo_Doatinga"
         />
       </div>
       <div className="texto">
@@ -16,7 +19,8 @@ function LogoDoatinga() {
         <p>Conectando corações<br />
         Transformando vidas</p>
       </div>
-    </div>
+
+    </Link>
   );
 }
 

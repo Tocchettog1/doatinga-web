@@ -1,6 +1,7 @@
 import React from 'react';
 import LoginForm from '../../components/Login/LoginForm';
 import AuthAside from '../../components/common/SideColumn/AuthAside';
+import LogoDoatinga from '../../components/common/Logo/LogoDoatinga.jsx';
 import './LoginPage.css';
 
 function LoginPage() {
@@ -17,7 +18,8 @@ function LoginPage() {
             backGroundVariant="orange"
             textVariant="light"
             buttonVariant="primary"
-            >
+          >
+            <LogoDoatinga alignment="right" />
         </AuthAside>
     </div>
   );

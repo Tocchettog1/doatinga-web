@@ -20,7 +20,6 @@ function LoginForm() {
         });
     }
 
-
         return (
             <form className = 'login-form' onSubmit = {handleSubmit}>
                 <h2 className = 'login-form-title'>Bem Vindo de Volta!</h2>
