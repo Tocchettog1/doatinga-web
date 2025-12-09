@@ -3,6 +3,7 @@ import Catalogo from './pages/Catalogo';
 import RegisterPage from "./pages/Register/RegisterPage.jsx";
 import LoginPage from './pages/Login/LoginPage.jsx';
 import Home from './pages/Home/Home.jsx';
+import api from '../api.js';
 
 function App() {
   return (
