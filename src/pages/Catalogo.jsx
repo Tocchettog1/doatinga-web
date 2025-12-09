@@ -32,7 +32,7 @@ export default function Catalogo() {
   // Filtragem dos itens
   const filtrados = useMemo(() => {
     return itens.filter((item) =>
-      item.nome.toLowerCase().includes(busca.toLowerCase())
+      item.name.toLowerCase().includes(busca.toLowerCase())
     );
   }, [itens, busca]);
 
