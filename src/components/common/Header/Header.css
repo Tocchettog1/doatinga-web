@@ -52,6 +52,17 @@
     text-decoration: none;
 }
 
+.HeaderLogin{
+
+    display: flex;
+    align-items: center;
+}
+
+.HeaderLogin a {
+    font-weight: 600;
+    color: #151515;
+    text-decoration: none;
+}
 
 .HeaderInstituicao {
 

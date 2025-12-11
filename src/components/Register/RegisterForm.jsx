@@ -7,6 +7,7 @@ import api from '../../../api.js';
 import userIcon from '../../assets/userIcon.png';
 import emailIcon from '../../assets/emailIcon.png';
 import passwordIcon from '../../assets/passwordIcon.png';
+import { toast } from 'sonner';
 
 
 function RegisterForm() {
@@ -20,11 +21,11 @@ function RegisterForm() {
         try {
 
             await api.post("/users/signup", { name, email, password });
+            toast.success("Cadastro bem sucedido!")
 
-            console.log("Usuário Cadastrado com sucesso!")
-            
         } catch (error) {
-            console.log(error);
+
+            console.log("ERRO FRONT:", error);
         }
 
         console.log('Dados do Formulário: ');
