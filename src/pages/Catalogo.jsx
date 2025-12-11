@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from 'react';
-import { fetchCatalogItems } from '../services/catalogApi';
+import api from '../services/api';
 import ItemCard from '../components/ItemCard';
 
 // IMPORTAÇÃO DO HEADER E FOOTER
@@ -18,8 +18,9 @@ export default function Catalogo() {
   useEffect(() => {
     async function carregar() {
       try {
-        const data = await fetchCatalogItems();
-        setItens(data);
+        const response = await api.get("/donations");
+
+        setItens(response.data.data);
       } catch (error) {
         setErro('Erro ao carregar itens do catálogo.');
       } finally {

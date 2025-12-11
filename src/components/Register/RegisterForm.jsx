@@ -2,7 +2,7 @@ import { useState } from 'react';
 import InputField from '../common/InputTemplate/InputField.jsx';
 import Button from '../common/Button.jsx';
 import './RegisterForm.css';
-import api from '../../../api.js';
+import api from '../../services/api.js';
 
 import userIcon from '../../assets/userIcon.png';
 import emailIcon from '../../assets/emailIcon.png';

@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import InputField from '../common/InputTemplate/InputField';
 import Button from '../common/Button';
 import './LoginForm.css';
-import api from '../../../api.js'
+import api from '../../services/api.js';
 import { toast } from 'sonner';
 
 import emailIcon from '../../assets/yellowEmailIcon.png'
