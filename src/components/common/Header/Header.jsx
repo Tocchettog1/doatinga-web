@@ -14,14 +14,9 @@ function Header() {
                     <li>Como funciona</li>
                 </ul>
             </nav>
-            <div className='HeaderCadastro'>
-                <a href='/cadastro'>Cadastre-se</a>
-            </div>
-            <div className='HeaderLogin'>
-                <a href='/login'>Login</a>
-            </div>
+            
             <div className='HeaderInstituicao'>
-                <a href='#'>Sou Instituição</a>
+                <a href='/login'>Sou Instituição</a>
             </div>
         </section>
     );
