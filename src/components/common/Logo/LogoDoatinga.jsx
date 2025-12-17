@@ -14,11 +14,6 @@ function LogoDoatinga({ alignment }) {
           className="container_imagem_logo_Doatinga"
         />
       </div>
-      <div className="texto">
-        <h1>DOATINGA</h1>
-        <p>Conectando corações<br />
-        Transformando vidas</p>
-      </div>
 
     </Link>
   );

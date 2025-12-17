@@ -5,7 +5,17 @@ function Header() {
     return (
         <section className='Header'>
             <div className='HeaderBarra'>
-                <LogoDoatinga />
+
+                <div className='LogoTexto'>
+                    <LogoDoatinga />
+
+                    <div className="texto">
+                        <h1>DOATINGA</h1>
+                        <p>Conectando corações<br />
+                            Transformando vidas</p>
+                    </div>
+                </div>
+
             </div>
             <nav className='HeaderNav'>
                 <ul>
@@ -14,7 +24,7 @@ function Header() {
                     <li>Como funciona</li>
                 </ul>
             </nav>
-            
+
             <div className='HeaderInstituicao'>
                 <a href='/login'>Sou Instituição</a>
             </div>

@@ -5,8 +5,6 @@
     font-family: 'Lexend', sans-serif;
     color: #151515;
     border-top: 1px #D5D5D5 solid;
-
-
     box-shadow: 0 -6px 12px rgba(39, 39, 39, 0.12); /* SOMBRA INFERIOR */
 }
 
@@ -82,9 +80,16 @@
 
 .Footer__bottom {
     padding: 1px;
-    padding-top: 1rem;
+    max-height: 2em;
+    height: auto;
+    padding-top: 0.4rem;
     text-align: center;
+    margin: 0;
     font-size: 0.9rem;
     color: #4c4c4c;
     border-top: 1px #D5D5D5 solid;;
+}
+
+.Footer__bottom p {
+    margin: 0;
 }
