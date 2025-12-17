@@ -42,6 +42,11 @@
     transition: background-color 0.2s ease;
 }
 
+.btn-register:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .btn-register:hover {
     background-color: #388138;
 }
