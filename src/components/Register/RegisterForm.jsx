@@ -14,6 +14,7 @@ function RegisterForm() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const isDisabled = !name || !password || !email;
 
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -71,6 +72,8 @@ function RegisterForm() {
             <Button
                 type='submit'
                 className='btn-register'
+                disabled={isDisabled}
+                
             >
                 Cadastrar
             </Button>
